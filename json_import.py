@@ -1,9 +1,9 @@
 import requests
 import json
-from json import load
+import pygmaps
 
-class truck(object):
-    
+class Truck(object):
+
     def __init__(self, name, longitude, latitude, street_name):
         self.location = [longitude, latitude]
         self.name = name
@@ -21,7 +21,7 @@ listy = [1,2,3,4,5,6,7,8,9]
 #for truckno in listy:
 #    print j[truckno]['applicant'], j[truckno]['location']['longitude'], j[truckno]['location']['latitude'], '\n', j[truckno]['locationdescription']
 
-truck1 = truck(j[0]['applicant'], j[0]['location']['longitude'], j[0]['location']['latitude'],  j[0]['locationdescription'])
+truck1 = Truck(j[0]['applicant'], j[0]['location']['longitude'], j[0]['location']['latitude'],  j[0]['locationdescription'])
 
 
 
@@ -31,10 +31,9 @@ print truck1.location
 trucklist = []
 
 for items in j:
-    trucklist.append(truck(j[0]['applicant'], j[0]['location']['longitude'], j[0]['location']['latitude'],  j[0]['locationdescription']))
+    trucklist.append(Truck(j[0]['applicant'], j[0]['location']['longitude'], j[0]['location']['latitude'],  j[0]['locationdescription']))
 
 
 print trucklist[0].name, trucklist[0].location
-    
 
-
+sf = pygmaps.maps(37.783333, -122.416667, 14)
