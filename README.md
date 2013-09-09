@@ -1,0 +1,1 @@
+This project is an attempt at creating a food truck finder, complete with schedules. The initial scope will be San Francisco, but may be extended later. The purpose of this project is to provide a setting for a few friends to improve their programming skills.
