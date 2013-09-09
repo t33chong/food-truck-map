@@ -9,6 +9,22 @@ class Truck(object):
         self.name = name
         self.street_name = street_name
 
+    def get_latitude(self):
+        """Accessor method; returns latitude."""
+        return self.location[1]
+
+    def get_longitude(self):
+        """Accessor method; returns longitude."""
+        return self.location[0]
+
+    def get_name(self):
+        """Accessor method; returns name."""
+        return self.name
+
+    def get_street_name(self):
+        """Accessor method; returns street name."""
+        return self.street_name
+
 
 r = requests.get('http://data.sfgov.org/resource/rqzj-sfat.json')
 
