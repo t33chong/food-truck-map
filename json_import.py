@@ -53,3 +53,5 @@ for items in j:
 print trucklist[0].name, trucklist[0].location
 
 sf = pygmaps.maps(37.783333, -122.416667, 14)
+sf.addpoint(37.7901490874965, -122.398658184594, '#0000FF', 'Cupkates Bakery, LLC')
+sf.draw('/var/www/sf.html')
